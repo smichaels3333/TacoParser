@@ -29,15 +29,29 @@ namespace LoggingKata.Test
             //       extract the Longitude.  Your .csv file will have many of these lines,
             //       each representing a TacoBell location
 
-            //Arrange
+            //Arrange - write the code we need in order to call the method we are testing
+            var tester = new TacoParser();
 
             //Act
+            var actual = tester.Parse(line);
 
             //Assert
+            Assert.NotNull(actual);
         }
 
 
         //TODO: Create a test ShouldParseLatitude
+        public void ShouldParseLatitude(string line, double expected) 
+        {
+            //Arrange
+            var tester = new TacoParser();
+
+            //Act
+            var actual = tester.Parse(line);
+
+            //Assert
+            Assert.NotNull(actual);
+        }
 
     }
 }
